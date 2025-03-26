@@ -1,6 +1,6 @@
 let pacman;
 let ghosts = [];
-let numGhosts = 15;
+let numGhosts = 12;
 
 function setup(){
     createCanvas(500,500);
@@ -16,8 +16,11 @@ function setup(){
 function draw(){
     background(52,52,52)
     pacman.render();
+    pacman.move();
 
-    for(let i = 0; i<numGhosts; i++){
-        ghosts[i].render();
-        }
-}
+    // for(let i = 0; i<numGhosts; i++){
+    //     ghosts[i].render();
+    //     }
+} 
+
+

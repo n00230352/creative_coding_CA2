@@ -11,7 +11,7 @@ class Ghost{
         noLoop();
         noStroke();
         fill(random(255), random(255), random(255));
-        rect(100, 100, 25, 12.5); 
+        // rect(100, 100, 25, 12.5); 
         ellipse(112.5, 100, 25, 25);  
         
         pop()
