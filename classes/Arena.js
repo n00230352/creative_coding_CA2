@@ -3,9 +3,11 @@ class Arena {
 		this.numGhosts = obj.numGhosts || 5;
 		this.arenaWidth = obj.arenaWidth || 450;
 		this.arenaHeight = obj.arenaHeight || 450;
-		this.ghosts = obj.ghosts || [];
+		this.ghosts =  [];
 		this.arenaPosX = width / 2; 
 		this.arenaPosY =  height / 2;
+
+		this.generateGhosts();
 	}
 
 	renderArena() {
@@ -25,12 +27,12 @@ class Arena {
 		pop();
 	}
 
-	generateghosts() {
+	generateGhosts() {
 		for (let i = 0; i < this.numGhosts; i++) {
 			let num = random(0,1);
 			if(num<0.5){
 				this.ghosts.push(
-					new Ghos({
+					new Ghost({
 						posX: random(0, this.arenaWidth),
 						posY: random(0, this.arenaHeight),
 					})
@@ -48,7 +50,7 @@ class Arena {
 			ghost.pos.y = map(ghost.pos.y, 0, this.arenaHeight, this.arenaHeight, 0);
 		}
 
-        if (ghost.pos.y >= this.arenaWidth) {
+        if (ghost.pos.y >= this.arenaHeight) {
 			ghost.pos.y = 0;
 			ghost.pos.x = map(ghost.pos.x, 0, this.arenaWidth, this.arenaWidth, 0);
 		} else if (ghost.pos.y  < 0) {

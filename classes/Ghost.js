@@ -1,5 +1,5 @@
 class Ghost {
-    constructor(obj = {}) { 
+    constructor(obj) { 
         this.posX = obj.posX || random(50, 450); 
         this.posY = obj.posY || random(50, 450);
 
