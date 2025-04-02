@@ -16,23 +16,27 @@ class Ghost {
 
         this.color = color(random(255), random(255), random(255));
     }
-
     move() {
         this.posX += this.speed * this.direction.x;
         this.posY += this.speed * this.direction.y;
-
-        if (this.posX <= 50) {
-            this.direction.x = 1; 
+    
+        // Check for collisions with the canvas boundaries
+        if (this.posX <= 50) {            
+            this.direction.x *= -1; // Flip direction to the right
+            this.posX = 50; // Reset position to the edge
         } 
-        if (this.posX >= 450) {
-            this.direction.x = -1; 
+        if (this.posX >= 450) {            
+            this.direction.x *= -1; // Flip direction to the left
+            this.posX = 450; // Reset position to the edge
         } 
         
-        if (this.posY <= 50) {
-            this.direction.y = 1; 
+        if (this.posY <= 50) {                        
+            this.direction.y *= -1; // Flip direction down
+            this.posY = 50; // Reset position to the edge
         } 
-        if (this.posY >= 450) {
-            this.direction.y = -1; 
+        if (this.posY >= 450) {            
+            this.direction.y *= -1; // Flip direction up
+            this.posY = 450; // Reset position to the edge
         } 
     }
 

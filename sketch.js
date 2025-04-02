@@ -15,10 +15,11 @@ function setup(){
 function draw(){
     background(52,52,52)
     myArena.renderArena();
+    pacman.render();
+    pacman.move();
 
-   
-        myArena.moveghosts();
-        myArena.renderGhosts(); 
+    myArena.moveghosts();
+    myArena.renderGhosts(); 
     
 
 } 
