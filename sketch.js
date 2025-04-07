@@ -20,8 +20,6 @@ function draw(){
 
     myArena.moveghosts();
     myArena.renderGhosts(); 
-    
-
 } 
 
 

@@ -33,21 +33,22 @@ class Pacman {
 	}
 
 	move() {
-		if (keyIsDown(LEFT_ARROW)) {
-			this.posX -= this.speed;
-			this.currentAngle = "left";
-		}
-		if (keyIsDown(RIGHT_ARROW)) {
-			this.posX += this.speed;
-			this.currentAngle = "right";
-		}
-		if (keyIsDown(UP_ARROW)) {
-			this.posY -= this.speed;
+
+        if (keyIsDown(LEFT_ARROW)) {
+            this.posX -= this.speed;
+            this.currentAngle = "left";
+        }
+        if (keyIsDown(RIGHT_ARROW)) {
+            this.posX += this.speed;
+            this.currentAngle = "right";
+        }
+        if (keyIsDown(UP_ARROW)) {
+            this.posY -= this.speed;
             this.currentAngle = "up";
-		}
-		if (keyIsDown(DOWN_ARROW)) {
-			this.posY += this.speed;
+        }
+        if (keyIsDown(DOWN_ARROW)) {
+            this.posY += this.speed;
             this.currentAngle = "down";
-		}
-	}
+        }
+    }
 }
