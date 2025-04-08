@@ -3,23 +3,18 @@ class Arena {
 		this.numGhosts = obj.numGhosts || 5;
 		this.arenaWidth = obj.arenaWidth || 450;
 		this.arenaHeight = obj.arenaHeight || 450;
+		this.arenaPosX = obj.arenaPosX || width / 2;
+		this.arenaPosY = obj.arenaPosY || height / 2;
 		this.ghosts = [];
-		this.arenaPosX = width / 2;
-		this.arenaPosY = height / 2;
-
 		this.generateGhosts();
 	}
 
 	renderArena() {
 		push();
 		translate(this.arenaPosX, this.arenaPosY);
+		rectMode(CENTER);
 		fill(150, 150, 150);
-		rect(
-			-this.arenaWidth / 2,
-			-this.arenaHeight / 2,
-			this.arenaWidth,
-			this.arenaHeight
-		);
+		rect(0, 0, this.arenaWidth, this.arenaHeight);
 		pop();
 	}
 
