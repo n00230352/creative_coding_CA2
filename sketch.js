@@ -16,7 +16,7 @@ function draw(){
     background(52,52,52)
     myArena.renderArena();
     pacman.render();
-    pacman.move();
+    pacman.move(myArena);
 
     myArena.moveghosts();
     myArena.renderGhosts(); 
