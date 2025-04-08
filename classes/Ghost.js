@@ -2,7 +2,7 @@ class Ghost {
     constructor(obj) { 
         this.posX = obj.posX || random(50, 450); 
         this.posY = obj.posY || random(50, 450);
-
+        this.radius = obj.radius || 20;
         this.speed = obj.speed || 2; 
         
         // Only move up/down or left/right (no diagonal movement)

@@ -43,4 +43,19 @@ class Arena {
 			ghost.move();
 		});
 	}
+
+		checkCollisions(pacman) {
+		let newGhosts = []; 
+		for (let i = 0; i < this.ghosts.length; i++) {
+			let ghost = this.ghosts[i];
+			let distance = dist(pacman.posX, pacman.posY, ghost.posX, ghost.posY);
+	
+			if (distance < pacman.radius + ghost.radius) {
+				console.log("Ghost eaten");
+			} else {
+				newGhosts.push(ghost);
+			}
+		}
+		this.ghosts = newGhosts;
+	}
 }

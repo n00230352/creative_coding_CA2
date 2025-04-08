@@ -20,6 +20,7 @@ function draw(){
 
     myArena.moveghosts();
     myArena.renderGhosts(); 
+    myArena.checkCollisions(pacman);
 } 
 
 
