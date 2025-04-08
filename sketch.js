@@ -21,6 +21,11 @@ function draw(){
     myArena.moveghosts();
     myArena.renderGhosts(); 
     myArena.checkCollisions(pacman);
+
+    fill(255);
+    textSize(20);
+    textAlign(LEFT, TOP);
+    text("Ghosts: " + myArena.ghostsEaten, 10, 10);
 } 
 
 

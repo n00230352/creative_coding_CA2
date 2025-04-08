@@ -6,6 +6,7 @@ class Arena {
 		this.arenaPosX = obj.arenaPosX || width / 2;
 		this.arenaPosY = obj.arenaPosY || height / 2;
 		this.ghosts = [];
+		this.ghostsEaten = 0; 
 		this.generateGhosts();
 	}
 
@@ -52,10 +53,16 @@ class Arena {
 	
 			if (distance < pacman.radius + ghost.radius) {
 				console.log("Ghost eaten");
+				this.ghostsEaten++;
+    			console.log("Ghosts Eaten:", this.ghostsEaten);
 			} else {
 				newGhosts.push(ghost);
 			}
 		}
 		this.ghosts = newGhosts;
+		if (this.ghosts.length === 0) {
+			console.log("All ghosts eaten! Total:", this.ghostsEaten);
+			noLoop(); 
+		}
 	}
 }
