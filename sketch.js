@@ -28,4 +28,12 @@ function draw(){
     text("Ghosts: " + myArena.ghostsEaten, 10, 10);
 } 
 
+function keyPressed() {
+    if (key === 'W') { 
+        pacman.increaseSpeed();
+    } else if (key === 'S') { 
+        pacman.reduceSpeed();
+    }
+}
+
 

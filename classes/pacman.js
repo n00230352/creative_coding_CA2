@@ -1,8 +1,9 @@
 class Pacman {
     constructor(obj) {
-        this.posX = obj.posX || 100; 
-        this.posY = obj.posY || 200; 
-        this.speed = 3; 
+        this.posX = obj.posX ||  width / 2;
+        this.posY = obj.posY || height / 2 ; 
+        this.speed = 2; 
+        this.maxSpeed = 7;
         this.radius = 25; 
 
         this.currentAngle = "left"; 
@@ -58,5 +59,19 @@ class Pacman {
 
         this.posX = constrain(this.posX, leftBoundary, rightBoundary);
         this.posY = constrain(this.posY, topBoundary, bottomBoundary);
+    }
+
+    increaseSpeed() {
+        if (this.speed < this.maxSpeed) { 
+        this.speed += 1;
+        //console.log("Pacman's speed increased to:", this.speed);
+    }
+}
+
+    reduceSpeed() {
+        if (this.speed > 1) { 
+            this.speed -= 1; 
+            //console.log("Pacman's speed reduced to:", this.speed);
+        } 
     }
 }

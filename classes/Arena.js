@@ -1,6 +1,6 @@
 class Arena {
 	constructor(obj) {
-		this.numGhosts = obj.numGhosts || 5;
+		this.numGhosts = obj.numGhosts || 10;
 		this.arenaWidth = obj.arenaWidth || 450;
 		this.arenaHeight = obj.arenaHeight || 450;
 		this.arenaPosX = obj.arenaPosX || width / 2;
